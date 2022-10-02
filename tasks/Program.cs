@@ -91,8 +91,8 @@ void starTask(){
     Array.Resize(ref oddArray, oddCounter);
     Console.WriteLine("четные элементы [" + String.Join(",", evenArray) + "], нечетные элементы [" + String.Join(",", oddArray) + "]");
 
-    double evenAverage = Math.Round(evenArray.Average(), 2);
-    double oddAverage = Math.Round(oddArray.Average(), 2);
+    double evenAverage = evenCounter == 0 ? 0 : Math.Round(evenArray.Average(), 2);
+    double oddAverage = oddCounter == 0 ? 0 : Math.Round(oddArray.Average(), 2);
 
     if (evenAverage > oddAverage){
         Console.WriteLine("[" + String.Join(",", array)+$"] -> средн. арифм. значений элементов массива с чётными числами ({evenAverage}) > средн. арифм. значений элементов с нечётными числами ({oddAverage})");
